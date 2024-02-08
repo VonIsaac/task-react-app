@@ -12,4 +12,4 @@ export default function NoProject({onclick}){
             </p>
         </div>
     )
-}
+};

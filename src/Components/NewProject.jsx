@@ -1,4 +1,4 @@
-import Input from "./Input.jsx"
+import Input from "./Input.jsx";
 import { useRef } from "react";
 import Modal from "./Modal";
 
@@ -15,16 +15,16 @@ export default function NewProject({onAdd,onDelete}){
         const dueDateRefs = dueDateRef.current.value;
 
         if(inputRefs.trim() === "" || discriptionRefs.trim() === "" || dueDateRefs.trim() === ""){
-            modalOpen.current.open()
+            modalOpen.current.open();
             return;
-        }
+        };
 
         onAdd({
             title:inputRefs,
             discription:discriptionRefs,
             dueDate:dueDateRefs,
         })
-    }
+    };
 
     return (
 
@@ -48,4 +48,4 @@ export default function NewProject({onAdd,onDelete}){
             </div>
        </>
     )
-}
+};

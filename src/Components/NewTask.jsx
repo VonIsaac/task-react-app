@@ -6,7 +6,7 @@ export default function NewTask({onAdd}){
 
     function handleEnterdTask(e){
         setEnterdTask(e.target.value)
-    }
+    };
 
     function handleClickTask(){
         if(!enterdTask){
@@ -17,7 +17,7 @@ export default function NewTask({onAdd}){
         onAdd(enterdTask)
         setEnterdTask('');
         
-    }
+    };
 
     return(
         <>
@@ -33,4 +33,4 @@ export default function NewTask({onAdd}){
         </>
        
     )
-}
+};

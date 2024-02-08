@@ -4,7 +4,6 @@ import NoProject from './Components/NoProject.jsx';
 import SelectedProject from './Components/SelectedProject.jsx';
 import { useState } from 'react';
 
-
 function App() {
   const [projectSatate, setProjectState] = useState({
     selectedProject: undefined,
