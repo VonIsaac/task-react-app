@@ -90,7 +90,7 @@ function App() {
     })
   }
 
-  const selectedProjectIds = projectSatate.project.find(projects => projects.id === projectSatate.selectedProject)
+  const selectedProjectIds = projectSatate.project.find(projects => projects.id === projectSatate.selectedProject);
 
   let content = <SelectedProject 
     project ={selectedProjectIds} 

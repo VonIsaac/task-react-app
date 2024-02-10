@@ -1,4 +1,4 @@
-import Button from "./Button"
+import Button from "./Button";
 
 export default function ProjectSidebar({onclick, onSelectProject,selectedProject}){
 
@@ -19,4 +19,4 @@ export default function ProjectSidebar({onclick, onSelectProject,selectedProject
             </ul>
         </aside>
     )
-}
+};

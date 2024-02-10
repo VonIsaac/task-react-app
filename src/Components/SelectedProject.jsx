@@ -1,4 +1,4 @@
-import Task from "./Task.jsx"
+import Task from "./Task.jsx";
 
 export default function SelectedProject({ project, onDeleteProject,onAddTask, onDeleteTask,task  }){
 
@@ -21,5 +21,5 @@ export default function SelectedProject({ project, onDeleteProject,onAddTask, on
             <Task onAdd = {onAddTask}   onDelete = {onDeleteTask} task = {task}/>    
         </div>
     )
-}
+};
 

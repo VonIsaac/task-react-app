@@ -1,5 +1,5 @@
-import taskImg from '../assets/image.svg'
-import Button from './Button'
+import taskImg from '../assets/image.svg';
+import Button from './Button';
 export default function NoProject({onclick}){
 
     return(
@@ -11,5 +11,5 @@ export default function NoProject({onclick}){
                 <Button onClick = {onclick}>Creat New Project</Button>
             </p>
         </div>
-    )
+    )       
 };

@@ -1,6 +1,7 @@
 import { useState, useRef} from "react";
 import ModalTask from "./ModalTask";
 export default function NewTask({onAdd}){
+    
     const modalDialog = useRef();
     const [enterdTask, setEnterdTask] = useState('');
 
