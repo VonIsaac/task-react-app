@@ -1,6 +1,9 @@
-import { useState, useRef} from "react";
+import { useState, useRef, useContext} from "react";
 import ModalTask from "./ModalTask";
-export default function NewTask({onAdd}){
+import { TaskConcepts } from "../../TaskConcepts/TaskContext";
+
+export default function NewTask(){
+    const { onAddTask } = useContext(TaskConcepts);
     
     const modalDialog = useRef();
     const [enterdTask, setEnterdTask] = useState('');
@@ -15,7 +18,7 @@ export default function NewTask({onAdd}){
             return;
         }
 
-        onAdd(enterdTask)
+       onAddTask(enterdTask)
         setEnterdTask('');
         
     };

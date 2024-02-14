@@ -2,6 +2,7 @@ import ProjectSidebar from './Components/ProjectSidebar.jsx';
 import NewProject from './Components/NewProject.jsx';
 import NoProject from './Components/NoProject.jsx';
 import SelectedProject from './Components/SelectedProject.jsx';
+import { TaskConcepts } from '../TaskConcepts/TaskContext.jsx';
 import { useState } from 'react';
 
 function App() {
@@ -95,27 +96,32 @@ function App() {
   let content = <SelectedProject 
     project ={selectedProjectIds} 
     onDeleteProject = {handleDelete}
-    onAddTask = {handleAddTask}
-    onDeleteTask = {handleDeleteTask}
-    task = {projectSatate.task}
   />
 
   if(projectSatate.selectedProject === null){
-     content = <NewProject onAdd = {handleAddProject} onDelete = {handleDeleteProject}/>
+    content = <NewProject onAdd = {handleAddProject} onDelete = {handleDeleteProject}/>
   }else if(projectSatate.selectedProject === undefined){
     content = <NoProject onclick={handleStartAddProject} />
   };
 
+  const tskValue = {
+    onAddTask: handleAddTask,
+    onDeleteTask:handleDeleteTask,
+    tasking: projectSatate.task,
+    onclickStart: handleStartAddProject,
+    selectedProject: handleSelectProject,
+  }
+
   return (
     <>
+    <TaskConcepts.Provider value={tskValue}>
      <main className=' h-screen my-8 flex gap-8'>
         <ProjectSidebar   
-          onclick ={handleStartAddProject}
           onSelectProject = {projectSatate.project}
-          selectedProject = {handleSelectProject}
         />
         {content}
      </main>
+     </TaskConcepts.Provider>
     </>
   )
 };

@@ -1,12 +1,15 @@
 import Button from "./Button";
+import { TaskConcepts } from "../../TaskConcepts/TaskContext";
+import { useContext } from "react";
 
-export default function ProjectSidebar({onclick, onSelectProject,selectedProject}){
+export default function ProjectSidebar({ onSelectProject}){
+    const {onclickStart,selectedProject} = useContext(TaskConcepts)
 
     return(
         <aside  className=" w-2/3 px-8 py-16 bg-slate-900 text-stone-50 md:w-72 rounded-r-xl">
             <h2 className=" mb-8 font-bold uppercase md:text-xl text-stone-200">Your Project</h2>
             <div>
-                <Button onClick = {onclick}>+ Add Project</Button>
+                <Button onClick = {onclickStart}>+ Add Project</Button>
             </div>
             <ul>
                 {onSelectProject.map((prevProject) => (
