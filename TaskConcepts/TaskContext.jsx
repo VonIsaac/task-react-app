@@ -6,4 +6,5 @@ export const TaskConcepts = createContext({
     tasking: [],
     onclickStart: () => {},
     selectedProject: () => {},
+    onCancelTask: () => {},
 })

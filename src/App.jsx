@@ -99,7 +99,7 @@ function App() {
   />
 
   if(projectSatate.selectedProject === null){
-    content = <NewProject onAdd = {handleAddProject} onDelete = {handleDeleteProject}/>
+    content = <NewProject onAdd = {handleAddProject} />
   }else if(projectSatate.selectedProject === undefined){
     content = <NoProject onclick={handleStartAddProject} />
   };
@@ -110,6 +110,7 @@ function App() {
     tasking: projectSatate.task,
     onclickStart: handleStartAddProject,
     selectedProject: handleSelectProject,
+    onCancelTask: handleDeleteProject,
   }
 
   return (
